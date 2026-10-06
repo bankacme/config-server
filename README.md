@@ -11,7 +11,7 @@ y, si el servicio corre con un perfil, con `application-<perfil>.yml` y `<servic
 | Dónde corre | `CONFIG_GIT_URI` | Qué lee |
 |---|---|---|
 | IDE, sin variable | `https://github.com/bankacme/bank-config` (valor por defecto) | Lo que esté subido en `main` |
-| `docker-compose` de `bank-platform` | `file:///config-repo` (la carpeta `../bank-config` montada) | Lo que esté **commiteado** en `main` local, aunque no esté subido |
+| `docker-compose` de `bank-platform` | sin variable, el mismo valor por defecto | Lo mismo: lo subido en `main` |
 
 En los dos casos es Git: un cambio en `bank-config` sin commit no se ve. Para probarlo hay que hacer
 commit (y push, si se usa GitHub) y reiniciar el Config Server y el servicio.
